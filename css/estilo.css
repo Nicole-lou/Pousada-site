@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --background: #F5F5DC;
+    --primary-color: #A0522D;
+    --secondary-color: #262626;
+    --text-color: #000000;
+    --text-color-secundary: #FFFFFF;
+    --secondary: #BFAF9E;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.cabecalho {
+    width: 100%;
+    background-color: var(--background);
+    overflow: visible;
+}
+
+.cabecalho .topo {
+    width: 100%;
+    max-width: 1200px;
+    height: 45px;
+    margin: auto;
+    display: flex;
+}
+
+.cabecalho .topo .endereco {
+    width: 350px;
+    height: 45px;
+}
+
+.cabecalho .topo .endereco p {
+    font-size: 13px;
+    margin-top: 15px;
+    color: var(--text-color);
+}
+
+.cabecalho .topo .whats {
+    width: 350px;
+    height: 45px;
+    margin-left: 75px;
+}
+
+.cabecalho .topo .whats h5 {
+    font-size: 20px;
+    margin-top: 15px;
+    color: var(--text-color);
+    float: left;
+    margin-left: 10px;
+}
+
+.cabecalho .topo .sociais {
+    width: 350px;
+    height: 45px;
+    margin-left: 75px;
+    background-color: var(--background);
+    margin: 6px;
+
+}
+
+.cabecalho .topo .sociais img.facebook {
+    margin-left: 220px;
+    margin-top: 8px;
+}
+
+.cabecalho .topo .sociais img.instagram {
+    margin-left: 12px;
+    margin-top: 8px;
+}
+
+.cabecalho .topo .sociais .img.youtube {
+    margin-left: 12px;
+    margin-top: 8px;
+}
+
+.cabecalho .topo .sociais a {
+    text-decoration: none;
+}
+
+.cabecalho .navegacao {
+    width: 100%;
+    background-color: var(--background);
+    padding: 10px 0;
+}
+
+.cabecalho .navegacao .navegacao-principal {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho .navegacao .navegacao-principal .logo {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .navegacao .navegacao-principal .menu {
+    flex: 1 1 auto;
+    height: auto;
+    text-align: center;
+}
+
+/* Aumenta um pouco o texto do menu */
+.navbar-nav .nav-link {
+    font-size: 1.3rem;
+    padding: 0.5rem 0.75rem;
+}
+
+/* bandeiras dentro do collapse (telinhas) */
+.collapse .d-lg-none img,
+.navbar .d-lg-none img {
+    height: 30px;
+    width: auto;
+    margin: 0 6px;
+}
+
+.cabecalho .navegacao .navegacao-principal .menu ul li {
+    display: inline;
+    margin: 0 15px;
+    line-height: normal;
+}
+
+.cabecalho .navegacao .navegacao-principal .menu ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.cabecalho .navegacao .navegacao-principal .menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+.cabecalho .navegacao .navegacao-principal .idiomas {
+    width: 150px;
+    height: auto;
+    margin-top: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.cabecalho .navegacao .navegacao-principal .idiomas img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    width: auto;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 991.98px) {
+    .cabecalho .topo {
+        padding: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cabecalho .topo .endereco,
+    .cabecalho .topo .whats,
+    .cabecalho .topo .sociais {
+        width: 100%;
+        text-align: center;
+        margin: 2px 0;
+        display: block;
+    }
+
+    /* remove floats e centraliza textos do topo em telas menores */
+    .cabecalho .topo .whats h5,
+    .cabecalho .topo .endereco h5,
+    .cabecalho .topo .sociais h5 {
+        float: none;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .cabecalho .navegacao .navegacao-principal {
+        height: auto;
+        padding: 8px 0;
+    }
+
+    .cabecalho .navegacao .navegacao-principal .idiomas {
+        display: none; /* esconde bandeiras em telas pequenas (mostradas no menu collapse) */
+    }
+
+    .cabecalho .navegacao .navegacao-principal .menu ul li {
+        line-height: normal;
+        margin: 6px 10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .cabecalho .topo h5  {
+        font-size: 12px;
+    }
+
+    .cabecalho .navegacao .navegacao-principal {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/* Estilos responsivos para a imagem principal - BANNER FULLWIDTH */
+.imagem {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 991.98px) {
+    .imagem {
+        margin-top: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .imagem {
+        margin-top: 0;
+        padding: 0;
+    }
+}
