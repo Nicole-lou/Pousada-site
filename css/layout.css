@@ -1,0 +1,88 @@
+:root {
+    --background: #F5F5DC;
+    --primary-color: #A0522D;
+    --secondary-color: #262626;
+    --text-color: #000000;
+    --text-color-secundary: #FFFFFF;
+    --secondary: #BFAF9E;
+}
+
+.container-home .caixa .caixa-estadia {
+    width: 100%;
+    min-height: 210px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    box-sizing: border-box;
+}
+
+.container-home {
+    margin-bottom: 40px;
+}
+
+.container-home .caixa .caixa-estadia h1 {
+    text-align: center;
+    color: var(--text-color-secundary);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(20px, 2.8vw, 26px);
+    line-height: 1.2;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+}
+
+.container-home .caixa .caixa-estadia p {
+    text-align: center;
+    color: var(--text-color-secundary);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 1.8vw, 20px);
+    margin: 0 0 12px 0;
+}
+
+.container-home .caixa .caixa-estadia button.consulte {
+    width: clamp(140px, 30vw, 200px);
+    height: clamp(36px, 4vh, 44px);
+    margin: 0 auto 0 auto;
+    display: block;
+    background-color: #A0522D;
+    border: 1px solid var(--text-color-secundary);
+    cursor: pointer;
+    font-size: clamp(14px, 1.6vw, 16px);
+    font-weight: 300;
+    padding: 6px 12px;
+}
+
+.container-home .caixa .caixa-estadia button.consulte a {
+    text-decoration: none;
+    color: var(--text-color-secundary);
+}
+
+.container-home .caixa .caixa-estadia button.consulte:hover {
+    background-color: var(--text-color-secundary);
+    transition: 0.3s;
+}
+
+/* Ajustes finos para telas muito pequenas */
+@media (max-width: 480px) {
+    .container-home .caixa .caixa-estadia {
+        padding: 16px 12px;
+        min-height: 160px;
+    }
+
+    .container-home .caixa .caixa-estadia h1 {
+        font-size: clamp(18px, 4.5vw, 22px);
+    }
+
+    .container-home .caixa .caixa-estadia p {
+        font-size: clamp(13px, 3.5vw, 16px);
+    }
+
+    .container-home .caixa .caixa-estadia button.consulte {
+        width: 85%;
+        max-width: 260px;
+    }
+}
+
+
