@@ -21,6 +21,8 @@
 
 .container-home {
     margin-bottom: 40px;
+    background-color: var(--background);
+   
 }
 
 .container-home .caixa .caixa-estadia h1 {
