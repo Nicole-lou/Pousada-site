@@ -28,9 +28,12 @@ body {
 .cabecalho .topo {
     width: 100%;
     max-width: 1200px;
-    height: 45px;
+    height: auto;
     margin: auto;
+    padding: 12px 0;
     display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .cabecalho .topo .endereco {
@@ -248,3 +251,236 @@ body {
         padding: 0;
     }
 }
+
+/* depoimentos section */
+.depoimentos {
+    padding: 60px 20px;
+}
+
+.depoimentos .titulo-depoimento {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.depoimentos .titulo-depoimento span {
+    color: var(--primary-color);
+}
+
+.depoimentos .box-container .box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    color: var(--primary-color);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.depoimentos .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.depoimentos .box-container .box {
+    border: var(--primary-color);
+    text-align: center;
+}
+
+.depoimentos .box-container box p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    padding: 2rem 0;
+    line-height: 1.8;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.depoimentos .box-container .box img.cliente {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+/* mapa section */
+.mapa {
+    padding: 60px 20px;
+    margin-top: 0;
+}
+
+.mapa .titulo-mapa {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.mapa-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.mapa-container .map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.mapa-container .map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* fallback: caso o iframe esteja direto dentro de .mapa-container */
+.mapa-container iframe {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto !important;
+    display: block;
+    border: 0;
+}
+
+@media (max-width: 575.98px) {
+    .mapa-container {
+        padding: 0 8px;
+    }
+}
+
+/* Rodapé simples e responsivo */
+.rodape {
+    background-color: var(--background);
+    color: var(--text-color);
+    padding: 60px 20px 30px;
+
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 50px 40px;
+}
+
+.footer-column h3 {
+    color: var(--primary-color);
+    font-size: 1.35rem;
+    margin-bottom: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+}
+
+.footer-column p,
+.footer-column ul {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.footer-column a:hover {
+  color: var(--primary-color);
+  padding-left: 7px;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+
+@media (max-width: 575.98px) {
+    .rodape {
+        padding: 40px 10px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+    }
+}
+
+/* Botão WhatsApp Flutuante */
+.whatsapp-flutuante {
+    position: sticky;
+    bottom: 20px;
+    left: 20px;
+    width: 56px;
+    height: 56px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 20px 0;
+}
+
+.whatsapp-flutuante img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.whatsapp-flutuante:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transform: scale(1.1);
+}
+
+@media (max-width: 575.98px) {
+    .whatsapp-flutuante {
+        width: 48px;
+        height: 48px;
+        bottom: 16px;
+        left: 16px;
+    }
+    .whatsapp-flutuante img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
