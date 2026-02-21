@@ -1,0 +1,25 @@
+:root {
+    --background: #F5F5DC;
+    --primary-color: #A0522D;
+    --secondary-color: #262626;
+    --text-color: #000000;
+    --text-color-secundary: #FFFFFF;
+    --secondary: #BFAF9E;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+color: var(--text-color);
+background-color: var(--background);
+}
+
+h1, h2, h3 {
+font-family: 'Playfair Display', serif;
+}
+
+.hero-section {
+background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+url('img/foto4.jpg') center/cover no-repeat;
+min-height: 65vh;
+color: white;
+}
