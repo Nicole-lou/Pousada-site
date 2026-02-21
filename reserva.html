@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="css/estilo.css">
      <link rel="stylesheet" href="css/reserva.css">
     
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -53,7 +55,7 @@
                             <li class="nav-item"> <a class="nav-link" href="gastronomia.html">Gastronomia e Lazer</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="galeria.html">Galeria</a> </li>
                             <li class="nav-item"> <a class="nav-link" href="reserva.html">Reservas</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="contato.html">Fale Conosco</a> </li>
+                            
                         </ul>
                         <!-- bandeiras exibidas dentro do menu em telas pequenas -->
                         <div class="d-lg-none w-100 text-center mt-2">
@@ -77,59 +79,45 @@
         <article class="banner">
     <section class="hero-section d-flex align-items-center">
     <div class="container text-center">
+   
     <h1 class="titulo-banner display-3 fw-bold mb-3">Faça sua reserva</h1>
     <p class="lead fs-4">Preencha o formulário abaixo e agende sua estadia</p>
     </div>
     </section>
     </article> <!--fim banner-->
 
-    <section class="reserva-form py-5">
-    <div class="container">
+   <section class="reserva-form py-5">
+  <div class="container">
+    <div class="mb-3">
+      <label class="form-label">* Nome Completo</label>
+      <input type="text" class="form-control required-field" id="nome">
+    </div>
 
     <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">* Nome Completo</label>
-  <input type="text" class="form-control" id="exampleFormControlInput1">
-  </div>
-
-  <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">* Email </label>
-  <input type="email" class="form-control" id="exampleFormControlInput1">
-</div>
-
-  <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">* Cidade | Estado</label>
-  <input type="text" class="form-control" id="exampleFormControlInput1">
-</div>
-
- <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">* Telefone</label>
-  <input type="text" class="form-control" id="exampleFormControlInput1">
-</div>
-
-<div class="mb-3">
-  <label for="data" class="form-label">Check-in</label>
-  <input type="date" class="form-control" id="data">
-</div>
-
-<div class="mb-3">
-  <label for="data-saida" class="form-label">Check-out</label>
-  <input type="date" class="form-control" id="data">
-</div>
-
-<div class="whats">
-<a href="https://wa.me/552434511134?text=Olá%20Pousada%20Penedo,%20gostaria%20de%20fazer%20uma%20reserva!" target="_blank" class="btn btn-success btn-lg px-4 py-2 mt-3">Enviar no WhatsApp</a>
-
-
-
-</div>
-
-
+      <label class="form-label">* Email</label>
+      <input type="email" class="form-control required-field" id="email">
     </div>
-    </section>
 
+    <div class="mb-3">
+      <label class="form-label">* Telefone</label>
+      <input type="text" class="form-control required-field" id="telefone">
+    </div>
 
+    <div class="mb-3">
+      <label class="form-label">Check-in</label>
+      <input type="date" class="form-control required-field" id="data-entrada">
+    </div>
 
+    <div class="mb-3">
+      <label class="form-label">Check-out</label>
+      <input type="date" class="form-control required-field" id="data-saida">
+    </div>
 
+    <div class="whats">
+      <button onclick="validarEReservar()" class="btn btn-success btn-lg px-4 py-2 mt-3">Enviar no WhatsApp</button>
+    </div>
+  </div>
+</section>
 
 
 
@@ -152,7 +140,6 @@
 </a></li>
 <li><a href="galeria.html">Galeria</a></li>
 <li><a href="reserva.html">Reservas</a></li>
-<li><a href="contato.html">Fale Conosco</a></li>
 </ul>
 </div>
 <div class="footer-column">
@@ -174,6 +161,6 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<script src="Js/gastronomia.js"></script>
+<script src="Js/reserva.js"></script>
 </body>
 </html>

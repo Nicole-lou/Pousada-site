@@ -18,8 +18,22 @@ font-family: 'Playfair Display', serif;
 }
 
 .hero-section {
-background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
-url('img/foto4.jpg') center/cover no-repeat;
+background: linear-gradient(rgba(172, 122, 56, 0.5), rgba(168, 91, 40, 0.5)),
+center/cover no-repeat;
 min-height: 65vh;
-color: white;
+color: var(--text-color-secundary);
+}
+
+.form-label {
+font-weight: 500;
+color: var(--text-color);
+font-family: 'poppins', sans-serif;
+text-align: center;
+
+}
+
+.form-control {
+border: 1px solid var(--primary-color);
+max-width: 700px;
+
 }
